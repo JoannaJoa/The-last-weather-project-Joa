@@ -187,7 +187,7 @@ header {
 .forecast-day {
   background: #ffecd2;
   border-radius: 8px;
-  padding: 1px;
+  padding: 4px 3px;
   text-align: center;
   flex: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -207,7 +207,6 @@ header {
 .forecast-icon {
   font-size: 2rem;
   height: 3rem;
-  animation: bounce 3s infinite;
 }
 .icon-size {
   width: 3rem;
