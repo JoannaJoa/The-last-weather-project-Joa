@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Vibe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Itim&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="app-title">TempTeller</h1>
+        <form id="search-form" class="search-bar">
+          <input
+            type="text"
+            placeholder="🌍 Enter a city..."
+            id="city-input"
+            class="search-input"
+          />
+          <button type="submit" id="search-button" class="search-button">
+            🔍
+          </button>
+        </form>
+      </header>
+
+      <main class="weather-card">
+        <h2 class="location" id="current-city">Barcelona, ES</h2>
+        <div class="date-time" id="current-date-time">
+          Monday, November 5, 2024, 12:00 PM
+        </div>
+        <div class="weather-info">
+          <div class="weather-icon" id="weather-icon">
+            <img src="images/01d_t@2x.png" />
+          </div>
+          <div class="temperature" id="current-temperature">
+            21<span class="degree">°C</span>
+          </div>
+          <p class="weather-description" id="weather-description">
+            Sunny & Warm
+          </p>
+        </div>
+
+        <div class="weather-stats">
+          <div class="stat-item">
+            <span class="stat-icon">💧</span>
+            <span id="humidity"><strong>55% </strong></span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🍃</span>
+            <span id="wind-speed"><strong>15 km/h</strong></span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">☔</span>
+            <span id="precipitation"><strong>10%</strong></span>
+          </div>
+        </div>
+        <section class="forecast">
+          <h3>5-Day Forecast</h3>
+          <div class="forecast-days">
+            <div class="forecast-day">
+              <div class="forecast-day-name">Sat</div>
+              <div class="forecast-icon"><img src="images/01d_t.png" /></div>
+              <div class="forecast-temp">
+                <span class="high-temp">24°C</span>
+                <span class="low-temp">12°C</span>
+              </div>
+            </div>
+            <div class="forecast-day">
+              <div class="forecast-day-name">Sun</div>
+              <div class="forecast-icon"><img src="images/09d_t.png" /></div>
+              <div class="forecast-temp">
+                <span class="high-temp">22°C</span>
+                <span class="low-temp">10°C</span>
+              </div>
+            </div>
+            <div class="forecast-day">
+              <div class="forecast-day-name">Mon</div>
+              <div class="forecast-icon"><img src="images/13d_t.png" /></div>
+              <div class="forecast-temp">
+                <span class="high-temp">-5°C</span>
+                <span class="low-temp">3°C</span>
+              </div>
+            </div>
+            <div class="forecast-day">
+              <div class="forecast-day-name">Tue</div>
+              <div class="forecast-icon"><img src="images/01d_t.png" /></div>
+              <div class="forecast-temp">
+                <span class="high-temp">10°C</span>
+                <span class="low-temp">9°C</span>
+              </div>
+            </div>
+            <div class="forecast-day">
+              <div class="forecast-day-name">Wed</div>
+              <div class="forecast-icon"><img src="images/10d_t.png" /></div>
+              <div class="forecast-temp">
+                <span class="high-temp">15°C</span>
+                <span class="low-temp">10°C</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Built with ☕ by
+          <a href="https://github.com/JoannaJoa/" target="_blank"> Joanna </a>
+          |
+          <a
+            href="https://github.com/JoannaJoa/NewAppProjectJoa"
+            target="_blank"
+            >GitHub</a
+          >
+          | Hosted on
+          <a href="https://joa-weather.netlify.app/" target="_blank">Netlify</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="src/script.js"></script>
+  </body>
+</html>
